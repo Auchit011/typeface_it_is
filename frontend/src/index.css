@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Theme */
+@layer base {
+  html {
+    @apply bg-neutral-50 text-neutral-900;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    @apply antialiased tracking-tight;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-semibold;
+  }
+}
+
+/* Components */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-accent {
+    @apply bg-violet-600 text-white hover:bg-violet-700 focus-visible:ring-violet-500;
+  }
+
+  .btn-muted {
+    @apply bg-neutral-200 text-neutral-800 hover:bg-neutral-300 focus-visible:ring-neutral-400;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 rounded-lg border border-neutral-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent;
+  }
+
+  .card {
+    @apply bg-white shadow-md rounded-2xl p-6 border border-neutral-200;
+  }
+
+  .tag {
+    @apply inline-block px-3 py-1 text-xs font-semibold rounded-full;
+  }
+
+  .tag-income {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .tag-expense {
+    @apply bg-rose-100 text-rose-800;
+  }
+
+  .table-wrapper {
+    @apply overflow-x-auto rounded-lg border border-neutral-200;
+  }
+
+  .table {
+    @apply w-full text-sm text-left text-neutral-700;
+  }
+
+  .table thead {
+    @apply bg-neutral-100;
+  }
+
+  .table th, .table td {
+    @apply px-4 py-3 whitespace-nowrap border-b border-neutral-200;
+  }
+
+  .alert {
+    @apply p-4 rounded-lg border text-sm;
+  }
+
+  .alert-info {
+    @apply bg-blue-50 border-blue-200 text-blue-800;
+  }
+
+  .alert-success {
+    @apply bg-green-50 border-green-200 text-green-800;
+  }
+
+  .alert-error {
+    @apply bg-rose-50 border-rose-200 text-rose-800;
+  }
+
+  .file-drop {
+    @apply border-2 border-dashed border-neutral-300 rounded-xl p-8 text-center transition hover:border-neutral-500;
+  }
+
+  .spinner {
+    @apply animate-spin h-6 w-6 border-2 border-violet-600 border-t-transparent rounded-full;
+  }
+
+  .modal {
+    @apply fixed inset-0 bg-black/40 flex items-center justify-center z-50;
+  }
+
+  .modal-box {
+    @apply bg-white rounded-2xl shadow-xl max-w-lg w-full p-6;
+  }
+
+  .pill {
+    @apply px-3 py-1 text-xs rounded-full font-medium;
+  }
+
+  .pill-blue {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .pill-gray {
+    @apply bg-neutral-200 text-neutral-800;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .text-soft {
+    @apply text-neutral-500;
+  }
+
+  .heading-underline {
+    @apply relative after:absolute after:w-8 after:h-1 after:bg-violet-500 after:rounded-full after:bottom-0 after:left-0;
+  }
+
+  .transition-color {
+    @apply transition-colors duration-200 ease-in-out;
+  }
+}
+
